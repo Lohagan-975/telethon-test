@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Téléthon Place</title>
+  <style>
+    canvas { border:1px solid #ccc; image-rendering: pixelated; }
+  </style>
+</head>
+<body>
+  <h1>🎨 Téléthon Place</h1>
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const size = 10; // taille d'un pixel
+    const grid = [];
+
+    for (let x=0;x<50;x++){
+      grid[x]=[];
+      for (let y=0;y<50;y++){
+        ctx.fillStyle='#fff';
+        ctx.fillRect(x*size,y*size,size,size);
+      }
+    }
+  </script>
+</body>
+</html>
