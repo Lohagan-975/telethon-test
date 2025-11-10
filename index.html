@@ -2,27 +2,23 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Fresques de la guilde du jeu spécial Téléthon</title>
-  <style>
-    canvas { border:1px solid #ccc; image-rendering: pixelated; }
-  </style>
+  <title>Fresque de la guilde du jeu - Spécial Téléthon</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🎨 Fresques de la guilde du jeu spécial Téléthon</h1>
-  <canvas id="canvas" width="500" height="500"></canvas>
-  <script>
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    const size = 10; // taille d'un pixel
-    const grid = [];
+  <h1>Fresque de la guilde du jeu - Spécial Téléthon</h1>
+  <p>Faites un don -> obtenez des pixels -> participez à la fresque collective !</p>
 
-    for (let x=0;x<50;x++){
-      grid[x]=[];
-      for (let y=0;y<50;y++){
-        ctx.fillStyle='#fff';
-        ctx.fillRect(x*size,y*size,size,size);
-      }
-    }
-  </script>
+  <div id="canvas-container">
+    <canvas id="place" width="400" height="400"></canvas>
+  </div>
+
+  <div id="info">
+    <p id="pixels-left">Pixels restants : <span>0</span></p>
+    <button id="sync">Synchroniser mes pixels</button>
+    <p id="last-donor"></p>
+  </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
